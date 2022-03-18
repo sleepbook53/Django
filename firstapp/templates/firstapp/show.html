@@ -1,0 +1,24 @@
+<body>
+    <h1>show!!</h1>
+    <hr>
+    <p>
+        <!-- HTML 주석..실행되지 않아요.. -->
+        <!--
+            중괄호는 Django에서 사용하는 태그라이브러리
+            - 서버에서 데이터를 html에 입력할 때 사용..
+            - 입력된 최종 HTML이 사용자 브라우저로 전송됨
+        -->
+        {{ data }}
+        
+    </p>
+    <hr>
+    <p>
+        {% for item in data %}
+        <h3>
+            {{item}} / {{ item.id }} / {{item.name}}
+        </h3>
+        {% endfor %}
+        
+
+    </p>
+</body>

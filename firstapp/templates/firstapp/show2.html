@@ -1,0 +1,34 @@
+<body>
+    <h1>show2 - 행과 열의 테이블로 그려보기..</h1>
+    <hr>
+    <p>
+        <!-- HTML 주석..실행되지 않아요.. -->
+        <!--
+            중괄호는 Django에서 사용하는 태그라이브러리
+            - 서버에서 데이터를 html에 입력할 때 사용..
+            - 입력된 최종 HTML이 사용자 브라우저로 전송됨
+        -->
+        {{ data }}
+        
+    </p>
+    <hr><body>
+        <h1>show2 - 행과 열의 테이블로 그려보기..</h1>
+        <hr>
+        <table border = "1" width = "100%">
+            <tr bgcolor = "yellow">
+                {% comment %} 이곳은 제목이 들어갑니다. {% endcomment %}
+                <th width = "30%">아이디</th>
+                <th>이름</th>
+            </tr>
+            {% comment %} 아래는 테이블에서 조회한 각각의 행들을 반복하여 출력.. {% endcomment %}
+            <tr>
+                {% for item in table %}
+                {% comment %} 이곳은 각 행마다 컬럼의 값들을 입력하는 곳입니다. {% endcomment %}
+                <td align = "center">{{ item.id }}</td> <!--여기에는 id 컬럼값 넣기 -->
+                <td align = "center">{{item.name}} </td> <!--여기에는 name 컬럼값 넣기-->
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+ 
+</body>

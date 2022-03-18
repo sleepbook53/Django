@@ -21,5 +21,7 @@ urlpatterns = [
     path('main/', views.main),
     path('insert/', views.insert),
     path('show/', views.show),
+    path('show2/', views.show2),
+    path('show3/', views.show3),
     
 ]

@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 #**앱을 만들 때 마다 항상 여기에 등록을 해줘야함
 INSTALLED_APPS = [
+    'pandasapp',
     'secondapp',
     'firstapp',
     'django.contrib.admin',

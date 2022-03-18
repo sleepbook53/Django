@@ -39,3 +39,18 @@ def show(rquest) :
     for c in curriculum:
         result += c.name + '<br>'
     return HttpResponse(result)
+
+def show2(rquest) :
+    curriculum = Curriculum.objects.all()
+    
+    return render(
+        rquest, 'firstapp/show.html', {'data' : curriculum}
+    )
+
+#html 페이지에 테이블(행과 열)형태로 그려보기
+def show3(rquest) :
+    curriculum = Curriculum.objects.all()
+    
+    return render(
+        rquest, 'firstapp/show2.html', {'table' : curriculum}
+    )
